@@ -6,5 +6,5 @@ Docker Image and scripts for easily compiling native applications (C, C++ and Ru
 ```
 $ git clone --recurse-submodules https://github.com/SteamDeckHomebrew/Native-Toolchain
 $ cd Native-Toolchain
-$ docker build -t "SteamDeckHomebrew:Toolchain" .
+$ docker build -t "steam-deck-homebrew/toolchain" .
 ```

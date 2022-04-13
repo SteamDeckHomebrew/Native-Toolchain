@@ -12,4 +12,9 @@ RUN apt -q update
 RUN apt -qy install gcc-11 g++-11
 
 # Install Rust
-RUN curl https://sh.rustup.rs -sSf | sh -s — -y — default-toolchain nightly
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+RUN $HOME/.cargo/bin/rustup target add x86_64-unknown-linux-gnu
+RUN $HOME/.cargo/bin/rustup default nightly
+RUN $HOME/.cargo/bin/rustup component add rust-src
+RUN $HOME/.cargo/bin/cargo install xargo
+RUN $HOME/.cargo/bin/cargo install cross
